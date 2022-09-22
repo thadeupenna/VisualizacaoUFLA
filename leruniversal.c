@@ -181,10 +181,11 @@ double **SubstituicaoDireta(double **M, int m, double **b) {
     v[i][0] = (b[i][0] - sum) / M[i][i];
   }
   return v;
-}
+}   
+
 
 double TestaMatriz(double **M, double m, double n, double **Raizes) {
-  
+
 }
 
 int main(int argc, char **argv) {
