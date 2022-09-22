@@ -184,8 +184,17 @@ double **SubstituicaoDireta(double **M, int m, double **b) {
 }   
 
 
-double TestaMatriz(double **M, double m, double n, double **Raizes) {
+double TestaMatriz(double **M, int m, int n, double **b) {
+  double **erro, norma, comp;
+  int i,j;
 
+  norma = comp = 0; 
+  erro = MatrizxMatriz(M, m, m, b, m, 1);
+  for (i=0;i<m;i++) {
+    comp=(M[i][n-1]-erro[i][0]);
+    norma += comp*comp; 
+  }
+  return norma;
 }
 
 int main(int argc, char **argv) {
@@ -203,8 +212,7 @@ int main(int argc, char **argv) {
   Raizes = SubstituicaoReversa(U,m,v);
   puts("\n\n");
   ImprimeMatriz(b, m, 1);
-  erro = TestaMatriz(M,m,n,Raizes);
-  v = MatrizxMatriz(M, m, m, b, m, 1); 
-  ImprimeMatriz(v, m, 1);
+  printf("\nerro=%g\n",TestaMatriz(M,m,n,Raizes));
+
   return 0;
 }
