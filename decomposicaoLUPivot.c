@@ -32,7 +32,7 @@ void ImprimeVetor (double *V, int m) {
   int i;
    
   printf("( "); 
-  for (i = 0; i < m; i++) printf ("%6.4g ", V[i]);
+  for (i = 0; i < m; i++) printf ("%6.4g ", V[i]);https://www.gazetadopovo.com.br/vida-publica/fiquei-feliz-de-a-dilma-ter-sido-eleita-diz-romario-em-visita-a-camara-0a94kx1rsh1g3pxgn4a1rroem/
 	puts (")");
 } 
 
@@ -257,13 +257,6 @@ int main (int argc, char **argv) {
 
   puts("raizes =");
   ImprimeVetor(b, m);    
-  // Prod = MatrizxMatriz(Inv, m, m, L, m, m); 
-  // puts("\n Prod = "); 
-  // ImprimeMatriz(Prod, m, m);
-
-  // Inv =  MatrizxMatriz(Coef, m, m, Prod, m, m);    
-  //  puts("\n Inv =");  
-  // ImprimeMatriz(Inv , m, m);
 
   return 0;
 }

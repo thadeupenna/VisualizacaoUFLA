@@ -15,7 +15,7 @@ double **LeMatriz(char *nome, int *m, int *n)
     Matriz[i] = malloc(*n * sizeof(double));
 
   for (i = 0; i < *m; i++)
-  {
+  
     for (j = 0; j < *n; j++)
       fscanf(fp, "%lf", &Matriz[i][j]);
   }
