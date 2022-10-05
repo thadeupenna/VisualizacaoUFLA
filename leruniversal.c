@@ -212,7 +212,7 @@ int main(int argc, char **argv) {
   Raizes = SubstituicaoReversa(U,m,v);
   puts("\n\n");
   ImprimeMatriz(b, m, 1);
-  printf("\nerro=%g\n",TestaMatriz(M,m,n,Raizes));
+  printf("\nerro=%g\n",sqrt(TestaMatriz(M,m,n,Raizes)));
 
   return 0;
 }
